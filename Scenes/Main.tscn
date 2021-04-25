@@ -13,13 +13,13 @@ script = ExtResource( 6 )
 [node name="Level1" parent="." instance=ExtResource( 2 )]
 
 [node name="Level2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -72, 1224 )
+position = Vector2( 0, 3780 )
 
 [node name="Level3" parent="." instance=ExtResource( 1 )]
-position = Vector2( -112, 2296 )
+position = Vector2( 0, 7020 )
 
 [node name="Level4" parent="." instance=ExtResource( 4 )]
-position = Vector2( -152, 3280 )
+position = Vector2( 0, 10260 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( -24, -432 )
