@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Levels/Level2/Sea.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Level/level.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Levels/Level2/Walls.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Mine.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Smoke.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Enemies/Requin.tscn" type="PackedScene" id=6]
 
 [node name="Level2" instance=ExtResource( 2 )]
 
@@ -29,17 +30,30 @@ position = Vector2( -2232, -1528 )
 [node name="Mine5" parent="." index="7" instance=ExtResource( 4 )]
 position = Vector2( 528, 376 )
 
-[node name="Smoke" parent="Mine5" index="2" instance=ExtResource( 5 )]
-position = Vector2( -1704, -56 )
+[node name="Requin" parent="." index="8" instance=ExtResource( 6 )]
+position = Vector2( -8, -344 )
+time = 2
+direction = Vector2( 1, 0 )
 
-[node name="Smoke2" parent="Mine5" index="3" instance=ExtResource( 5 )]
-position = Vector2( 1168, -656 )
+[node name="Requin2" parent="." index="9" instance=ExtResource( 6 )]
+position = Vector2( 1176, -1248 )
+direction = Vector2( -1, 0 )
+
+[node name="Requin3" parent="." index="10" instance=ExtResource( 6 )]
+position = Vector2( -376, 672 )
+direction = Vector2( 1, 0 )
+
+[node name="Smoke" parent="." index="11" instance=ExtResource( 5 )]
+position = Vector2( -1176, 320 )
+
+[node name="Smoke2" parent="." index="12" instance=ExtResource( 5 )]
+position = Vector2( 1696, -280 )
 frame = 1
 
-[node name="Smoke3" parent="Mine5" index="4" instance=ExtResource( 5 )]
-position = Vector2( -2200, -1920 )
+[node name="Smoke3" parent="." index="13" instance=ExtResource( 5 )]
+position = Vector2( -1672, -1544 )
 frame = 1
 
-[node name="Smoke4" parent="Mine5" index="5" instance=ExtResource( 5 )]
-position = Vector2( 1744, -1896 )
+[node name="Smoke4" parent="." index="14" instance=ExtResource( 5 )]
+position = Vector2( 2272, -1520 )
 frame = 0
