@@ -1,0 +1,30 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Octopus/Octopus6.PNG" type="Texture" id=1]
+[ext_resource path="res://Assets/Octopus/Octopus3.PNG" type="Texture" id=2]
+[ext_resource path="res://Assets/Octopus/Octopus4.PNG" type="Texture" id=3]
+[ext_resource path="res://Assets/Octopus/Octopus5.PNG" type="Texture" id=4]
+[ext_resource path="res://Assets/Octopus/Octopus2.PNG" type="Texture" id=5]
+[ext_resource path="res://Assets/Octopus/Octopus1.PNG" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 355.258
+
+[node name="Octopus" type="Area2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 624, -40 )
+frames = SubResource( 1 )
+playing = true
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
