@@ -8,4 +8,4 @@ script = ExtResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-scale = Vector2( 2.19161, 2.19161 )
+rect = Rect2( -2880, -1620, 5760, 3240 )
