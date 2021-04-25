@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Depression.mp3-568371df407bfb4cd4e2a0d7d61cc71d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Depression.mp3"
+dest_files=[ "res://.import/Depression.mp3-568371df407bfb4cd4e2a0d7d61cc71d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

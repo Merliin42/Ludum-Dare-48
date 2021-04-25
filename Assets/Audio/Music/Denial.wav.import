@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Denial.wav-318ab964ca81b50873ee5fb087881060.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Denial.wav"
+dest_files=[ "res://.import/Denial.wav-318ab964ca81b50873ee5fb087881060.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

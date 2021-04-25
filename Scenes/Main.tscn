@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Level/Level3.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level/Level1.tscn" type="PackedScene" id=2]
@@ -6,11 +6,17 @@
 [ext_resource path="res://Scenes/Level/Level4.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Music_Selector.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Audio/Music/Anger.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Audio/Music/Denial.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio/Music/Depression.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Audio/Music/Bargain.mp3" type="AudioStream" id=11]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 6 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 build_mode = 1
@@ -33,3 +39,9 @@ SPEED = 500
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 current = true
+
+[node name="Music_Selector" parent="." instance=ExtResource( 7 )]
+denial = ExtResource( 9 )
+anger = ExtResource( 8 )
+bargain = ExtResource( 11 )
+depression = ExtResource( 10 )
