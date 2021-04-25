@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bargain.mp3-a0eab6b9e454363e3e2a647b6d05d04a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Bargain.mp3"
+dest_files=[ "res://.import/Bargain.mp3-a0eab6b9e454363e3e2a647b6d05d04a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

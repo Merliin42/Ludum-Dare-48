@@ -70,7 +70,7 @@ func _sinking_and_cant_go_up():
 
 func _on_Enemy_Colliding(area):
 	emit_signal("enemyCollided")
-	print("ouch")
+#	print("ouch")
 
 
 func _on_Gold_Colliding(area):
