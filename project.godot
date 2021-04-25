@@ -96,6 +96,13 @@ down={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="collisions"
+2d_physics/layer_2="ennemies"
+2d_physics/layer_3="coins"
+2d_physics/layer_4="oxygen"
+
 [physics]
 
 common/enable_pause_aware_picking=true
