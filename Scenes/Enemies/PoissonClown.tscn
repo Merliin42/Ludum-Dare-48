@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Enemies/Enemy.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 22.9181
+height = 41.5314
+
+[node name="PoissonClown" instance=ExtResource( 1 )]
+position = Vector2( 88.3884, 48.7904 )
+direction = Vector2( 1, 0 )
+
+[node name="CollisionShape2D" parent="." index="0"]
+rotation = -1.5708
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" parent="." index="1"]
+animation = "moveRight"
