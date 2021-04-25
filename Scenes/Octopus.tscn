@@ -18,12 +18,11 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=2]
 radius = 355.258
 
-[node name="Area2D" type="Area2D"]
+[node name="Octopus" type="Area2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 624, -40 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
