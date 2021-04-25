@@ -6,6 +6,7 @@ signal enemyCollided
 signal octopusCollided
 var weight : int = 0
 var movement : int = 0
+onready var _animated_sprite = $AnimatedSprite
 
 
 # Called when the node enters the scene tree for the first time.
@@ -34,6 +35,7 @@ func _normal_Movement():
 		direction.y = +1
 	elif Input.is_action_pressed("up"):
 		direction.y = -1
+	_handle_Animation(direction)
 	move_and_slide(direction.normalized()*SPEED)
 	
 func _sinking_Movement():
@@ -49,6 +51,7 @@ func _sinking_Movement():
 		direction.y = +1
 	elif Input.is_action_pressed("up"):
 		direction.y = -1
+	_handle_Animation(direction)
 	move_and_slide(direction.normalized()*SPEED)
 	
 func _sinking_and_cant_go_up():
@@ -66,7 +69,32 @@ func _sinking_and_cant_go_up():
 		direction.x = +1
 	if Input.is_action_pressed("down"):
 		direction.y = +1
+	_handle_Animation(direction)
 	move_and_slide(direction.normalized()*SPEED)
+
+func _handle_Animation(direction):
+	if direction.x > 0:
+		_animated_sprite.flip_h = true
+		_animated_sprite.flip_v = false
+		if direction.y > 0:
+			_animated_sprite.play("moveDownLeft")
+		else:
+			_animated_sprite.play("moveUpLeft")
+	elif direction.x == 0:
+		if direction.y == 1:
+			_animated_sprite.flip_v = true
+			_animated_sprite.play("moveUp")
+		elif direction.y == -1:
+			_animated_sprite.flip_v = false
+			_animated_sprite.play("moveUp")
+	elif direction.x < 0:
+		_animated_sprite.flip_h = false
+		_animated_sprite.flip_v = false
+		if direction.y <=0:
+			_animated_sprite.play("moveUpLeft")
+		else:
+			_animated_sprite.play("moveDownLeft")
+		
 
 func _on_Enemy_Colliding(area):
 	emit_signal("enemyCollided")
