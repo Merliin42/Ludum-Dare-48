@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Levels/Level3/Sea.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Level/level.tscn" type="PackedScene" id=2]
@@ -6,8 +6,10 @@
 [ext_resource path="res://Scenes/Octopus.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Smoke.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/Level3.gd" type="Script" id=7]
 
 [node name="Level3" instance=ExtResource( 2 )]
+script = ExtResource( 7 )
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource( 1 )
@@ -20,11 +22,11 @@ position = Vector2( -512, 776 )
 
 [node name="Smoke" parent="." index="4" instance=ExtResource( 5 )]
 position = Vector2( -792, -1104 )
-frame = 4
+frame = 0
 
 [node name="Smoke2" parent="." index="5" instance=ExtResource( 5 )]
 position = Vector2( 1008, -1608 )
-frame = 3
+frame = 7
 
 [node name="Coins" type="Node2D" parent="." index="6"]
 

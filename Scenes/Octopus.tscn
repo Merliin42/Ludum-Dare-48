@@ -28,6 +28,7 @@ script = ExtResource( 8 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 624, -40 )
 frames = SubResource( 1 )
+frame = 2
 playing = true
 flip_h = true
 

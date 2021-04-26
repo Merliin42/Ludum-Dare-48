@@ -104,6 +104,7 @@ down={
 2d_physics/layer_3="coins"
 2d_physics/layer_4="oxygen"
 2d_physics/layer_5="player"
+2d_physics/layer_6="depression"
 
 [physics]
 

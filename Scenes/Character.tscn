@@ -1,59 +1,59 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=39 format=2]
 
-[ext_resource path="res://Assets/Character/Character DownLeft/CharacterDown4.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Character/Diagonal1/CharacterDown4.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Character.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Character/Character DownLeft/CharacterDown5.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Character/CharacterUpLeft/CharacterUp1.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Character/CharacterUpLeft/CharacterUp8.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Character/CharacterUpLeft/CharacterUp4.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Character/CharacterUpLeft/CharacterUp7.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Character/Character-Up/CharacterUp2.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Character/Character-Up/CharacterUp1.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Character/Character-Up/CharacterUp8.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Character/Character-Up/CharacterUp6.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Character/Character DownLeft/CharacterDown3.png" type="Texture" id=12]
-[ext_resource path="res://Assets/Character/Character DownLeft/CharacterDown6.png" type="Texture" id=13]
-[ext_resource path="res://Assets/Character/CharacterUpLeft/CharacterUp3.png" type="Texture" id=14]
-[ext_resource path="res://Assets/Character/Character DownLeft/CharacterDown8.png" type="Texture" id=15]
-[ext_resource path="res://Assets/Character/Character DownLeft/CharacterDown2.png" type="Texture" id=16]
-[ext_resource path="res://Assets/Character/CharacterUpLeft/CharacterUp2.png" type="Texture" id=17]
-[ext_resource path="res://Assets/Character/CharacterUpLeft/CharacterUp5.png" type="Texture" id=18]
-[ext_resource path="res://Assets/Character/Character DownLeft/CharacterDown7.png" type="Texture" id=19]
-[ext_resource path="res://Assets/Character/CharacterUpLeft/CharacterUp6.png" type="Texture" id=20]
-[ext_resource path="res://Assets/Character/Character DownLeft/CharacterDown1.png" type="Texture" id=21]
-[ext_resource path="res://Assets/Character/Character-Up/CharacterUp4.png" type="Texture" id=22]
-[ext_resource path="res://Assets/Character/Character-Up/CharacterUp7.png" type="Texture" id=23]
-[ext_resource path="res://Assets/Character/Character-Up/CharacterUp5.png" type="Texture" id=24]
-[ext_resource path="res://Assets/Character/Character-Up/CharacterUp3.png" type="Texture" id=25]
-[ext_resource path="res://Assets/Character/CharacterLeft/CharacterUp1.png" type="Texture" id=26]
-[ext_resource path="res://Assets/Character/CharacterLeft/CharacterUp2.png" type="Texture" id=27]
-[ext_resource path="res://Assets/Character/CharacterLeft/CharacterUp8.png" type="Texture" id=28]
-[ext_resource path="res://Assets/Character/CharacterLeft/CharacterUp4.png" type="Texture" id=29]
-[ext_resource path="res://Assets/Character/CharacterLeft/CharacterUp7.png" type="Texture" id=30]
-[ext_resource path="res://Assets/Character/CharacterLeft/CharacterUp3.png" type="Texture" id=31]
-[ext_resource path="res://Assets/Character/CharacterLeft/CharacterUp5.png" type="Texture" id=32]
-[ext_resource path="res://Assets/Character/CharacterLeft/CharacterUp6.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Character/Diagonal1/CharacterDown5.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Character/Diagonal2/CharacterUp1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Character/Diagonal2/CharacterUp8.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Character/Diagonal2/CharacterUp4.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Character/Diagonal2/CharacterUp7.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Character/Up/CharacterUp2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Character/Up/CharacterUp1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Character/Up/CharacterUp8.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Character/Up/CharacterUp6.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Character/Diagonal1/CharacterDown3.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Character/Diagonal1/CharacterDown6.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Character/Diagonal2/CharacterUp3.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Character/Diagonal1/CharacterDown8.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Character/Diagonal1/CharacterDown2.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Character/Diagonal2/CharacterUp2.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Character/Diagonal2/CharacterUp5.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Character/Diagonal1/CharacterDown7.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Character/Diagonal2/CharacterUp6.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Character/Diagonal1/CharacterDown1.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Character/Up/CharacterUp4.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Character/Up/CharacterUp7.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Character/Up/CharacterUp5.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Character/Up/CharacterUp3.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Character/Side/CharacterUp1.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Character/Side/CharacterUp2.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Character/Side/CharacterUp8.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Character/Side/CharacterUp4.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Character/Side/CharacterUp7.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Character/Side/CharacterUp3.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Character/Side/CharacterUp5.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Character/Side/CharacterUp6.png" type="Texture" id=33]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 21 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 1 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 19 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 30 ), ExtResource( 28 ) ],
 "loop": true,
-"name": "moveDownLeft",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 7 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "moveUpLeft",
+"name": "Side",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 23 ) ],
 "loop": true,
-"name": "moveUp",
+"name": "Up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 30 ), ExtResource( 28 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 7 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "moveLeft",
+"name": "Diagonal2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 1 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 19 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Diagonal1",
 "speed": 5.0
 } ]
 
@@ -67,9 +67,6 @@ extents = Vector2( 32, 31.8461 )
 extents = Vector2( 31.75, 31.5961 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 31.75, 31.8461 )
-
-[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 32, 31.5961 )
 
 [node name="Character" type="KinematicBody2D"]
@@ -81,7 +78,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "moveLeft"
+animation = "Diagonal2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
@@ -95,18 +92,11 @@ __meta__ = {
 shape = SubResource( 3 )
 
 [node name="AreaGold" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGold"]
-shape = SubResource( 4 )
-
-[node name="AreaDepression" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDepression"]
-shape = SubResource( 5 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGold"]
+shape = SubResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -114,9 +104,8 @@ current = true
 [node name="AreaOctopus" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaOctopus"]
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [connection signal="area_entered" from="AreaEnemy" to="." method="_on_Enemy_Colliding"]
 [connection signal="area_entered" from="AreaGold" to="." method="_on_Gold_Colliding"]
-[connection signal="area_entered" from="AreaDepression" to="." method="_on_depression_level"]
 [connection signal="area_entered" from="AreaOctopus" to="." method="_on_Octopus_Colliding"]

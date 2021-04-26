@@ -76,12 +76,9 @@ script = ExtResource( 12 )
 position = Vector2( 0, 10260 )
 script = ExtResource( 12 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( -24, -432 )
-SPEED = 500
-
-[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
-current = true
+[node name="Character" parent="." instance=ExtResource( 5 )]
+position = Vector2( 50.3394, 10888.5 )
+SPEED = 400
 
 [node name="Music_Selector" parent="." instance=ExtResource( 7 )]
 denial = ExtResource( 9 )
@@ -93,7 +90,7 @@ acceptance = ExtResource( 10 )
 [node name="Acceptance" type="Area2D" parent="."]
 position = Vector2( 0, 11797.3 )
 collision_layer = 16
-collision_mask = 16
+collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Acceptance"]
 shape = SubResource( 1 )
