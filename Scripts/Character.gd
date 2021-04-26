@@ -150,7 +150,7 @@ func _on_Enemy_Colliding(area):
 
 func _on_Gold_Colliding(area):
 	print("nouvelle pièce d'or")
-	weight += .30
+	weight += .20
 	print(weight)
 
 

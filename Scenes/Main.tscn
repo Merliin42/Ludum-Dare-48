@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scenes/Level/Level3.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level/Level1.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Assets/Audio/Music/Depression.wav" type="AudioStream" id=11]
 [ext_resource path="res://Scripts/level.gd" type="Script" id=12]
 [ext_resource path="res://Assets/Audio/Music/Anger.wav" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Character/foetale.png" type="Texture" id=14]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 200.018
@@ -77,7 +78,7 @@ position = Vector2( 0, 10260 )
 script = ExtResource( 12 )
 
 [node name="Character" parent="." instance=ExtResource( 5 )]
-position = Vector2( 50.3394, 10888.5 )
+position = Vector2( -19.9409, -716.604 )
 SPEED = 400
 
 [node name="Music_Selector" parent="." instance=ExtResource( 7 )]
@@ -94,6 +95,10 @@ collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Acceptance"]
 shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Acceptance"]
+position = Vector2( 0, -20.2051 )
+texture = ExtResource( 14 )
 
 [node name="End" type="Area2D" parent="."]
 position = Vector2( 5.33936, -964.978 )

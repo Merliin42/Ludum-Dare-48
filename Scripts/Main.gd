@@ -27,4 +27,4 @@ func _on_End_body_shape_entered(body_id, body, body_shape, local_shape):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	$Character.weight = -1.1
 	if anim_name == "end" :
-		get_tree().change_scene("res://Scenes/Menu.tscn")
+		get_tree().change_scene("res://Scenes/Outro.tscn")

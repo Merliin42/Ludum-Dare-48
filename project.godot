@@ -10,9 +10,9 @@ config_version=4
 
 [application]
 
-config/name="Ludum-Dare-48"
-run/main_scene="res://Scenes/Main.tscn"
-config/icon="res://icon.png"
+config/name="Dive to live"
+run/main_scene="res://Scenes/Menu.tscn"
+config/icon="res://Assets/Character/Side/CharacterUp1.png"
 
 [display]
 
