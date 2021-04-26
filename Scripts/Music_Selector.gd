@@ -1,10 +1,10 @@
 extends Node2D
 
-export var denial : AudioStreamMP3
-export var anger : AudioStreamMP3
-export var bargain : AudioStreamMP3
-export var depression : AudioStreamMP3
-export var acceptance : AudioStreamMP3
+export var denial : AudioStream
+export var anger : AudioStream
+export var bargain : AudioStream
+export var depression : AudioStream
+export var acceptance : AudioStream
 
 func _ready():
 	$AudioStreamPlayer.stop()
@@ -23,7 +23,7 @@ func _on_Anger_body_entered(body):
 	$AudioStreamPlayer.stop()
 	$AudioStreamPlayer.stream = anger
 	$AudioStreamPlayer.play()
-	$Anger.monitoring = false
+	$Anger.queue_free()
 
 
 func _on_Bargain_body_entered(body):
@@ -31,7 +31,7 @@ func _on_Bargain_body_entered(body):
 	$AudioStreamPlayer.stop()
 	$AudioStreamPlayer.stream = bargain
 	$AudioStreamPlayer.play()
-	$Bargain.monitoring = false
+	$Bargain.queue_free()
 
 
 func _on_Depression_body_entered(body):
@@ -39,4 +39,9 @@ func _on_Depression_body_entered(body):
 	$AudioStreamPlayer.stop()
 	$AudioStreamPlayer.stream = depression
 	$AudioStreamPlayer.play()
-	$Depression.monitoring = false
+	$Depression.queue_free()
+
+func play_acceptance():
+	$AudioStreamPlayer.stop()
+	$AudioStreamPlayer.stream = acceptance
+	$AudioStreamPlayer.play()
