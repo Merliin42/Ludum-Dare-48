@@ -4,6 +4,7 @@ export var denial : AudioStreamMP3
 export var anger : AudioStreamMP3
 export var bargain : AudioStreamMP3
 export var depression : AudioStreamMP3
+export var acceptance : AudioStreamMP3
 
 func _ready():
 	$AudioStreamPlayer.stop()
@@ -18,19 +19,24 @@ func _process(delta):
 #	print($AudioStreamPlayer.stream)
 
 func _on_Anger_body_entered(body):
-	print("Anger")
+#	print("Anger")
 	$AudioStreamPlayer.stop()
 	$AudioStreamPlayer.stream = anger
 	$AudioStreamPlayer.play()
+	$Anger.monitoring = false
 
 
 func _on_Bargain_body_entered(body):
-	print("Bargain")
+#	print("Bargain")
 	$AudioStreamPlayer.stop()
 	$AudioStreamPlayer.stream = bargain
+	$AudioStreamPlayer.play()
+	$Bargain.monitoring = false
 
 
 func _on_Depression_body_entered(body):
-	print("Depression")
+#	print("Depression")
 	$AudioStreamPlayer.stop()
 	$AudioStreamPlayer.stream = depression
+	$AudioStreamPlayer.play()
+	$Depression.monitoring = false

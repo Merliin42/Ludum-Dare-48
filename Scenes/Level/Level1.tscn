@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Assets/Levels/Level1/Sky.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Level/level.tscn" type="PackedScene" id=2]
@@ -18,9 +18,10 @@
 [ext_resource path="res://Assets/Deco/dechets/bouteille1.PNG" type="Texture" id=16]
 [ext_resource path="res://Assets/Deco/dechets/plastique.PNG" type="Texture" id=17]
 [ext_resource path="res://Assets/Deco/dechets/bouteille2.PNG" type="Texture" id=18]
-
+[ext_resource path="res://Scripts/Level1.gd" type="Script" id=19]
 
 [node name="Level1" instance=ExtResource( 2 )]
+script = ExtResource( 19 )
 
 [node name="Sky" type="Sprite" parent="." index="0"]
 z_index = -2
@@ -36,341 +37,348 @@ texture = ExtResource( 4 )
 position = Vector2( -5.33984, 4.23804 )
 rect = Rect2( -2880, -1080, 5760, 3240 )
 
-[node name="bouteille1" type="Sprite" parent="VisibilityEnabler2D" index="0"]
-position = Vector2( -1588.14, 1893.25 )
+[node name="Boat" type="Sprite" parent="." index="4"]
+position = Vector2( 680, -1392 )
+texture = ExtResource( 5 )
+
+[node name="Seeweed" parent="." index="5" instance=ExtResource( 13 )]
+position = Vector2( 2242.66, 886.984 )
+animation = "seeweed1"
+frame = 3
+playing = true
+
+[node name="Seeweed2" parent="." index="6" instance=ExtResource( 13 )]
+position = Vector2( -2016.7, 1557.54 )
+rotation = 1.5708
+frame = 2
+playing = true
+
+[node name="Seeweed3" parent="." index="7" instance=ExtResource( 13 )]
+position = Vector2( 1171.7, 1455.66 )
+rotation = -1.91986
+frame = 6
+playing = true
+
+[node name="Seeweed4" parent="." index="8" instance=ExtResource( 13 )]
+position = Vector2( -2040.67, 1845.22 )
+rotation = 1.5708
+frame = 7
+playing = true
+
+[node name="Seeweed5" parent="." index="9" instance=ExtResource( 13 )]
+position = Vector2( -1992.73, 1677.41 )
+rotation = 1.5708
+frame = 4
+playing = true
+
+[node name="Déchets" type="Node2D" parent="." index="10"]
+
+[node name="bouteille1" type="Sprite" parent="Déchets" index="0"]
+position = Vector2( -1593.48, 1897.49 )
 texture = ExtResource( 16 )
 
-[node name="bouteille2" type="Sprite" parent="VisibilityEnabler2D" index="1"]
-position = Vector2( -1731.97, 934.334 )
+[node name="bouteille2" type="Sprite" parent="Déchets" index="1"]
+position = Vector2( -1737.31, 938.572 )
 texture = ExtResource( 18 )
 
-[node name="canette" type="Sprite" parent="VisibilityEnabler2D" index="2"]
-position = Vector2( -587.268, 418.916 )
+[node name="canette" type="Sprite" parent="Déchets" index="2"]
+position = Vector2( -592.608, 423.154 )
 texture = ExtResource( 14 )
 
-[node name="filet" type="Sprite" parent="VisibilityEnabler2D" index="3"]
-position = Vector2( -1510.23, -719.797 )
+[node name="filet" type="Sprite" parent="Déchets" index="3"]
+position = Vector2( -1515.57, -715.559 )
 texture = ExtResource( 15 )
 
-[node name="plastique" type="Sprite" parent="VisibilityEnabler2D" index="4"]
-position = Vector2( 923.026, 77.3022 )
+[node name="plastique" type="Sprite" parent="Déchets" index="4"]
+position = Vector2( 917.686, 81.5402 )
 texture = ExtResource( 17 )
 
-[node name="bouteille3" type="Sprite" parent="VisibilityEnabler2D" index="5"]
-position = Vector2( 1714.13, 2079.04 )
+[node name="bouteille3" type="Sprite" parent="Déchets" index="5"]
+position = Vector2( 1708.79, 2083.28 )
 texture = ExtResource( 16 )
 
-[node name="canette2" type="Sprite" parent="VisibilityEnabler2D" index="6"]
-position = Vector2( 1763.65, 90.1118 )
+[node name="canette2" type="Sprite" parent="Déchets" index="6"]
+position = Vector2( 1758.31, 94.3498 )
 texture = ExtResource( 14 )
 
-[node name="corail_1" type="Sprite" parent="VisibilityEnabler2D" index="7"]
-position = Vector2( 1492.46, 655.356 )
+[node name="corail_1" type="Sprite" parent="Déchets" index="7"]
+position = Vector2( 1487.12, 659.594 )
 texture = ExtResource( 12 )
 
-[node name="corail_2" type="Sprite" parent="VisibilityEnabler2D" index="8"]
-position = Vector2( -1903.92, -671.799 )
+[node name="corail_2" type="Sprite" parent="Déchets" index="8"]
+position = Vector2( -1909.26, -667.561 )
 texture = ExtResource( 11 )
 
-[node name="corail_3" type="Sprite" parent="VisibilityEnabler2D" index="9"]
-position = Vector2( 2843.4, -348.335 )
+[node name="corail_3" type="Sprite" parent="Déchets" index="9"]
+position = Vector2( 2838.06, -344.097 )
 rotation = -1.39626
 texture = ExtResource( 10 )
 
-[node name="corail_4" type="Sprite" parent="VisibilityEnabler2D" index="10"]
-position = Vector2( -2546.09, 274.81 )
+[node name="corail_4" type="Sprite" parent="Déchets" index="10"]
+position = Vector2( -2551.43, 279.048 )
 rotation = 1.5708
 texture = ExtResource( 9 )
 
-[node name="corail_5" type="Sprite" parent="VisibilityEnabler2D" index="11"]
-position = Vector2( -1409.21, 274.81 )
+[node name="corail_5" type="Sprite" parent="Déchets" index="11"]
+position = Vector2( -1414.55, 279.048 )
 texture = ExtResource( 11 )
 
-[node name="corail_6" type="Sprite" parent="VisibilityEnabler2D" index="12"]
-position = Vector2( -2608.86, 343.536 )
+[node name="corail_6" type="Sprite" parent="Déchets" index="12"]
+position = Vector2( -2614.2, 347.774 )
 rotation = 1.5708
 scale = Vector2( 0.690579, 0.602127 )
 texture = ExtResource( 9 )
 
-[node name="corail_7" type="Sprite" parent="VisibilityEnabler2D" index="13"]
-position = Vector2( -2620.28, 817.926 )
+[node name="corail_7" type="Sprite" parent="Déchets" index="13"]
+position = Vector2( -2625.62, 822.164 )
 rotation = 1.5708
 scale = Vector2( 0.683757, 0.53266 )
 texture = ExtResource( 9 )
 flip_h = true
 
-[node name="corail_8" type="Sprite" parent="VisibilityEnabler2D" index="14"]
-position = Vector2( -96.324, -219.9 )
+[node name="corail_8" type="Sprite" parent="Déchets" index="14"]
+position = Vector2( -101.664, -215.662 )
 texture = ExtResource( 11 )
 
-[node name="corail_9" type="Sprite" parent="VisibilityEnabler2D" index="15"]
-position = Vector2( 598.173, 555.463 )
+[node name="corail_9" type="Sprite" parent="Déchets" index="15"]
+position = Vector2( 592.833, 559.701 )
 texture = ExtResource( 11 )
 
-[node name="corail_10" type="Sprite" parent="VisibilityEnabler2D" index="16"]
-position = Vector2( 1768.35, -590.933 )
+[node name="corail_10" type="Sprite" parent="Déchets" index="16"]
+position = Vector2( 1763.01, -586.695 )
 texture = ExtResource( 11 )
 
-[node name="corail_11" type="Sprite" parent="VisibilityEnabler2D" index="17"]
-position = Vector2( 2334.42, 331.892 )
+[node name="corail_11" type="Sprite" parent="Déchets" index="17"]
+position = Vector2( 2329.08, 336.13 )
 texture = ExtResource( 11 )
 
-[node name="corail_12" type="Sprite" parent="VisibilityEnabler2D" index="18"]
-position = Vector2( -2546.09, 864.656 )
+[node name="corail_12" type="Sprite" parent="Déchets" index="18"]
+position = Vector2( -2551.43, 868.894 )
 rotation = 1.5708
 texture = ExtResource( 9 )
 flip_h = true
 
-[node name="corail_13" type="Sprite" parent="VisibilityEnabler2D" index="19"]
-position = Vector2( -2592.97, -477.194 )
+[node name="corail_13" type="Sprite" parent="Déchets" index="19"]
+position = Vector2( -2598.31, -472.956 )
 rotation = 1.5708
 texture = ExtResource( 12 )
 
-[node name="corail_14" type="Sprite" parent="VisibilityEnabler2D" index="20"]
-position = Vector2( 1342.52, 970.58 )
+[node name="corail_14" type="Sprite" parent="Déchets" index="20"]
+position = Vector2( 1337.18, 974.818 )
 rotation = -0.174533
 scale = Vector2( 1, 1 )
 texture = ExtResource( 10 )
 
-[node name="Boat" type="Sprite" parent="." index="4"]
-position = Vector2( 680, -1392 )
-texture = ExtResource( 5 )
+[node name="Meduses" type="Node2D" parent="." index="11"]
 
-[node name="Meduse" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Meduse" parent="Meduses" index="0" instance=ExtResource( 6 )]
 position = Vector2( 411.131, -848.96 )
 direction = Vector2( 1, -1 )
 
-[node name="Meduse2" parent="." index="6" instance=ExtResource( 6 )]
+[node name="Meduse2" parent="Meduses" index="1" instance=ExtResource( 6 )]
 position = Vector2( 352.398, -934.39 )
 direction = Vector2( -1, -1 )
 SPEED = 20
 
-[node name="Meduse3" parent="." index="7" instance=ExtResource( 6 )]
+[node name="Meduse3" parent="Meduses" index="2" instance=ExtResource( 6 )]
 position = Vector2( 320.362, -838.281 )
 SPEED = 30
 
-[node name="Meduse4" parent="." index="8" instance=ExtResource( 6 )]
+[node name="Meduse4" parent="Meduses" index="3" instance=ExtResource( 6 )]
 position = Vector2( 224.254, -918.372 )
 
-[node name="Meduse5" parent="." index="9" instance=ExtResource( 6 )]
+[node name="Meduse5" parent="Meduses" index="4" instance=ExtResource( 6 )]
 position = Vector2( -1617.83, -848.96 )
 SPEED = 0
 
-[node name="Meduse6" parent="." index="10" instance=ExtResource( 6 )]
+[node name="Meduse6" parent="Meduses" index="5" instance=ExtResource( 6 )]
 position = Vector2( 1057.2, -784.887 )
 direction = Vector2( -1, 1 )
 
-[node name="Meduse7" parent="." index="11" instance=ExtResource( 6 )]
+[node name="Meduse7" parent="Meduses" index="6" instance=ExtResource( 6 )]
 position = Vector2( 998.462, -870.317 )
 time = 2
 direction = Vector2( -1, -1 )
 
-[node name="Meduse8" parent="." index="12" instance=ExtResource( 6 )]
+[node name="Meduse8" parent="Meduses" index="7" instance=ExtResource( 6 )]
 position = Vector2( 128.145, -998.462 )
 time = 2
 SPEED = 20
 
-[node name="Meduse9" parent="." index="13" instance=ExtResource( 6 )]
+[node name="Meduse9" parent="Meduses" index="8" instance=ExtResource( 6 )]
 position = Vector2( 848.96, -982.444 )
 time = 2
 
-[node name="Meduse10" parent="." index="14" instance=ExtResource( 6 )]
+[node name="Meduse10" parent="Meduses" index="9" instance=ExtResource( 6 )]
 position = Vector2( -1030.5, -939.729 )
 SPEED = 0
 
-[node name="Meduse11" parent="." index="15" instance=ExtResource( 6 )]
+[node name="Meduse11" parent="Meduses" index="10" instance=ExtResource( 6 )]
 position = Vector2( -395.113, -811.584 )
 time = 2
 SPEED = 20
 
-[node name="Meduse12" parent="." index="16" instance=ExtResource( 6 )]
+[node name="Meduse12" parent="Meduses" index="11" instance=ExtResource( 6 )]
 position = Vector2( -485.883, -907.693 )
 time = 2
 SPEED = 20
 
-[node name="Meduse13" parent="." index="17" instance=ExtResource( 6 )]
+[node name="Meduse13" parent="Meduses" index="12" instance=ExtResource( 6 )]
 position = Vector2( -395.113, -961.087 )
 time = 2
 SPEED = 20
 
-[node name="Meduse14" parent="." index="18" instance=ExtResource( 6 )]
+[node name="Meduse14" parent="Meduses" index="13" instance=ExtResource( 6 )]
 position = Vector2( 1815.39, -859.639 )
 
-[node name="Meduse15" parent="." index="19" instance=ExtResource( 6 )]
+[node name="Meduse15" parent="Meduses" index="14" instance=ExtResource( 6 )]
 position = Vector2( 1703.26, -939.729 )
 
-[node name="Meduse16" parent="." index="20" instance=ExtResource( 6 )]
+[node name="Meduse16" parent="Meduses" index="15" instance=ExtResource( 6 )]
 position = Vector2( 710.136, -907.693 )
 time = 2
 direction = Vector2( 1, -1 )
 
-[node name="Meduse17" parent="." index="21" instance=ExtResource( 6 )]
+[node name="Meduse17" parent="Meduses" index="16" instance=ExtResource( 6 )]
 position = Vector2( 651.403, -982.444 )
 SPEED = 20
 
-[node name="Meduse18" parent="." index="22" instance=ExtResource( 6 )]
+[node name="Meduse18" parent="Meduses" index="17" instance=ExtResource( 6 )]
 position = Vector2( 485.883, -870.317 )
 direction = Vector2( -1, 1 )
 SPEED = 20
 
-[node name="Meduse19" parent="." index="23" instance=ExtResource( 6 )]
+[node name="Meduse19" parent="Meduses" index="18" instance=ExtResource( 6 )]
 position = Vector2( 2450.77, -913.032 )
 
-[node name="Meduse20" parent="." index="24" instance=ExtResource( 6 )]
+[node name="Meduse20" parent="Meduses" index="19" instance=ExtResource( 6 )]
 position = Vector2( 2520.18, -977.105 )
 
-[node name="Meduse21" parent="." index="25" instance=ExtResource( 6 )]
+[node name="Meduse21" parent="Meduses" index="20" instance=ExtResource( 6 )]
 position = Vector2( -2536.2, -913.032 )
 time = 2
 
-[node name="Meduse22" parent="." index="26" instance=ExtResource( 6 )]
+[node name="Meduse22" parent="Meduses" index="21" instance=ExtResource( 6 )]
 position = Vector2( -2594.93, -731.494 )
 time = 3
 direction = Vector2( -1, -1 )
 
-[node name="Meduse23" parent="." index="27" instance=ExtResource( 6 )]
+[node name="Meduse23" parent="Meduses" index="22" instance=ExtResource( 6 )]
 position = Vector2( -2707.06, -864.978 )
 direction = Vector2( -1, 1 )
 
-[node name="Meduse24" parent="." index="28" instance=ExtResource( 6 )]
+[node name="Meduse24" parent="Meduses" index="23" instance=ExtResource( 6 )]
 position = Vector2( -2744.44, -998.462 )
 time = 3
 
-[node name="PoissonClown" parent="." index="29" instance=ExtResource( 7 )]
+[node name="Poissons" type="Node2D" parent="." index="12"]
+
+[node name="PoissonClown" parent="Poissons" index="0" instance=ExtResource( 7 )]
 position = Vector2( -552.336, -495.825 )
 time = 2
 
-[node name="PoissonClown2" parent="." index="30" instance=ExtResource( 7 )]
+[node name="PoissonClown2" parent="Poissons" index="1" instance=ExtResource( 7 )]
 position = Vector2( 1166.94, -180.803 )
 time = 4
 
-[node name="PoissonClown3" parent="." index="31" instance=ExtResource( 7 )]
+[node name="PoissonClown3" parent="Poissons" index="2" instance=ExtResource( 7 )]
 position = Vector2( 697.076, -485.147 )
 time = 2
 direction = Vector2( -1, 0 )
 
-[node name="PoissonClown4" parent="." index="32" instance=ExtResource( 7 )]
+[node name="PoissonClown4" parent="Poissons" index="3" instance=ExtResource( 7 )]
 position = Vector2( -835.323, -170.124 )
 time = 2
 direction = Vector2( -1, 0 )
 
-[node name="PoissonClown5" parent="." index="33" instance=ExtResource( 7 )]
+[node name="PoissonClown5" parent="Poissons" index="4" instance=ExtResource( 7 )]
 position = Vector2( -1737.68, -357.002 )
 time = 6
 
-[node name="PoissonClown6" parent="." index="34" instance=ExtResource( 7 )]
+[node name="PoissonClown6" parent="Poissons" index="5" instance=ExtResource( 7 )]
 position = Vector2( 777.167, 598.745 )
 time = 5
 
-[node name="PoissonClown7" parent="." index="35" instance=ExtResource( 7 )]
+[node name="PoissonClown7" parent="Poissons" index="6" instance=ExtResource( 7 )]
 position = Vector2( 729.113, 652.139 )
 time = 5
 
-[node name="PoissonClown8" parent="." index="36" instance=ExtResource( 7 )]
+[node name="PoissonClown8" parent="Poissons" index="7" instance=ExtResource( 7 )]
 position = Vector2( -1342.56, 422.546 )
 time = 3
 direction = Vector2( -1, 0 )
 
-[node name="PoissonClown9" parent="." index="37" instance=ExtResource( 7 )]
+[node name="PoissonClown9" parent="Poissons" index="8" instance=ExtResource( 7 )]
 position = Vector2( -2511.88, 940.465 )
 time = 8
 
-[node name="PoissonClown10" parent="." index="38" instance=ExtResource( 7 )]
+[node name="PoissonClown10" parent="Poissons" index="9" instance=ExtResource( 7 )]
 position = Vector2( 2427.03, 358.474 )
 time = 2
 direction = Vector2( -1, 0 )
 
-[node name="PoissonClown11" parent="." index="39" instance=ExtResource( 7 )]
+[node name="PoissonClown11" parent="Poissons" index="10" instance=ExtResource( 7 )]
 position = Vector2( -109.822, 265.634 )
 time = 2
 direction = Vector2( -1, 0 )
 
-[node name="PoissonClown14" parent="." index="40" instance=ExtResource( 7 )]
+[node name="PoissonClown14" parent="Poissons" index="11" instance=ExtResource( 7 )]
 position = Vector2( 267.751, 1907.78 )
 time = 2
 direction = Vector2( -1, 0 )
 
-[node name="PoissonClown15" parent="." index="41" instance=ExtResource( 7 )]
+[node name="PoissonClown15" parent="Poissons" index="12" instance=ExtResource( 7 )]
 position = Vector2( -2015.67, 1745.96 )
 time = 2
 direction = Vector2( -1, 0 )
 
-[node name="PoissonClown16" parent="." index="42" instance=ExtResource( 7 )]
+[node name="PoissonClown16" parent="Poissons" index="13" instance=ExtResource( 7 )]
 position = Vector2( -439.45, 1350.41 )
 time = 2
 direction = Vector2( -1, 0 )
 
-[node name="PoissonClown12" parent="." index="43" instance=ExtResource( 7 )]
+[node name="PoissonClown12" parent="Poissons" index="14" instance=ExtResource( 7 )]
 position = Vector2( -995.504, 689.515 )
 time = 4
 
-[node name="PoissonDory" parent="." index="44" instance=ExtResource( 8 )]
+[node name="PoissonDory" parent="Poissons" index="15" instance=ExtResource( 8 )]
 position = Vector2( 5.33936, -128.145 )
 direction = Vector2( -1, 1 )
 
-[node name="PoissonDory2" parent="." index="45" instance=ExtResource( 8 )]
+[node name="PoissonDory2" parent="Poissons" index="16" instance=ExtResource( 8 )]
 position = Vector2( -148.74, 804.175 )
 direction = Vector2( 1, -1 )
 
-[node name="PoissonDory6" parent="." index="46" instance=ExtResource( 8 )]
+[node name="PoissonDory6" parent="Poissons" index="17" instance=ExtResource( 8 )]
 position = Vector2( 252.807, 1235.69 )
 direction = Vector2( 1, -1 )
 
-[node name="PoissonDory7" parent="." index="47" instance=ExtResource( 8 )]
+[node name="PoissonDory7" parent="Poissons" index="18" instance=ExtResource( 8 )]
 position = Vector2( 1385.53, 1858.98 )
 direction = Vector2( 1, -1 )
 
-[node name="PoissonDory8" parent="." index="48" instance=ExtResource( 8 )]
+[node name="PoissonDory8" parent="Poissons" index="19" instance=ExtResource( 8 )]
 position = Vector2( -879.913, 1745.11 )
 direction = Vector2( 1, -1 )
 
-[node name="PoissonDory9" parent="." index="49" instance=ExtResource( 8 )]
+[node name="PoissonDory9" parent="Poissons" index="20" instance=ExtResource( 8 )]
 position = Vector2( -1119.64, 1331.58 )
 direction = Vector2( 1, -1 )
 
-[node name="PoissonDory3" parent="." index="50" instance=ExtResource( 8 )]
+[node name="PoissonDory3" parent="Poissons" index="21" instance=ExtResource( 8 )]
 position = Vector2( -1051.86, -363.077 )
 time = 2
 direction = Vector2( -1, -1 )
 
-[node name="PoissonDory4" parent="." index="51" instance=ExtResource( 8 )]
+[node name="PoissonDory4" parent="Poissons" index="22" instance=ExtResource( 8 )]
 position = Vector2( -2381.36, 181.539 )
 time = 4
 
-[node name="PoissonDory5" parent="." index="52" instance=ExtResource( 8 )]
+[node name="PoissonDory5" parent="Poissons" index="23" instance=ExtResource( 8 )]
 position = Vector2( 2226.52, -357.738 )
 time = 8
 direction = Vector2( -1, 1 )
 
-[node name="PoissonClown13" parent="." index="53" instance=ExtResource( 7 )]
+[node name="PoissonClown13" parent="Poissons" index="24" instance=ExtResource( 7 )]
 position = Vector2( -2657.74, -281.762 )
 SPEED = 0
-
-[node name="Seeweed" parent="." index="54" instance=ExtResource( 13 )]
-position = Vector2( 2242.66, 886.984 )
-animation = "seeweed1"
-frame = 1
-playing = true
-
-[node name="Seeweed2" parent="." index="55" instance=ExtResource( 13 )]
-position = Vector2( -2016.7, 1557.54 )
-rotation = 1.5708
-playing = true
-
-[node name="Seeweed3" parent="." index="56" instance=ExtResource( 13 )]
-position = Vector2( 1171.7, 1455.66 )
-rotation = -1.91986
-frame = 4
-playing = true
-
-[node name="Seeweed4" parent="." index="57" instance=ExtResource( 13 )]
-position = Vector2( -2040.67, 1845.22 )
-rotation = 1.5708
-frame = 5
-playing = true
-
-[node name="Seeweed5" parent="." index="58" instance=ExtResource( 13 )]
-position = Vector2( -1992.73, 1677.41 )
-rotation = 1.5708
-frame = 2
-playing = true
