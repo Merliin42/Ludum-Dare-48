@@ -73,26 +73,38 @@ func _sinking_and_cant_go_up():
 	move_and_slide(direction.normalized()*SPEED)
 
 func _handle_Animation(direction):
-	if direction.x > 0:
-		_animated_sprite.flip_h = true
-		_animated_sprite.flip_v = false
-		if direction.y > 0:
-			_animated_sprite.play("moveDownLeft")
-		else:
-			_animated_sprite.play("moveUpLeft")
-	elif direction.x == 0:
+	if direction.x == 0:
 		if direction.y == 1:
 			_animated_sprite.flip_v = true
 			_animated_sprite.play("moveUp")
 		elif direction.y == -1:
 			_animated_sprite.flip_v = false
 			_animated_sprite.play("moveUp")
-	elif direction.x < 0:
+			
+	if direction.y == 0:
+		if direction.x == 1:
+			_animated_sprite.flip_h = true
+			_animated_sprite.flip_v = false
+			_animated_sprite.play("moveLeft")
+		elif direction.x == -1:
+			_animated_sprite.flip_h = false
+			_animated_sprite.flip_v = false
+			_animated_sprite.play("moveLeft")
+		
+	if direction.x > 0:
+		_animated_sprite.flip_h = true
+		_animated_sprite.flip_v = false
+		if direction.y > 0:
+			_animated_sprite.play("moveDownLeft")
+		elif direction.y < 0:
+			_animated_sprite.play("moveUpLeft")
+	
+	if direction.x < 0:
 		_animated_sprite.flip_h = false
 		_animated_sprite.flip_v = false
-		if direction.y <=0:
+		if direction.y < 0:
 			_animated_sprite.play("moveUpLeft")
-		else:
+		elif direction.y > 0:
 			_animated_sprite.play("moveDownLeft")
 		
 
