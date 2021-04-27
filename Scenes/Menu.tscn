@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Intro.ogv" type="VideoStream" id=1]
 [ext_resource path="res://Assets/Font/Houndville.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/Menu.jpg" type="Texture" id=3]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Audio/Music/Menu.wav" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 120
@@ -69,7 +70,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit2" type="Button" parent="."]
+[node name="Credit" type="Button" parent="."]
+visible = false
 margin_left = 1500.0
 margin_top = 20.0
 margin_right = 1887.0
@@ -95,5 +97,10 @@ text = "DIVE TO LIVE"
 align = 1
 autowrap = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

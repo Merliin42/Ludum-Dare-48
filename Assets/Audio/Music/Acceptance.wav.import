@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Acceptance.wav-e48f25eb939a13cd69c61f0b001bccd7.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Acceptance.wav"
+dest_files=[ "res://.import/Acceptance.wav-e48f25eb939a13cd69c61f0b001bccd7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

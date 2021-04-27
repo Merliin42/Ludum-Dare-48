@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scenes/Level/Level3.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level/Level1.tscn" type="PackedScene" id=2]
@@ -7,21 +7,22 @@
 [ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/Music_Selector.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/Audio/Music/Anger.mp3" type="AudioStream" id=8]
-[ext_resource path="res://Assets/Audio/Music/Denial.mp3" type="AudioStream" id=9]
-[ext_resource path="res://Assets/Audio/Music/Depression.mp3" type="AudioStream" id=10]
-[ext_resource path="res://Assets/Audio/Music/Bargain.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Audio/Music/Bargain.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Audio/Music/Denial.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio/Music/Acceptance.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Audio/Music/Depression.wav" type="AudioStream" id=11]
 [ext_resource path="res://Scripts/level.gd" type="Script" id=12]
+[ext_resource path="res://Assets/Audio/Music/Anger.wav" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Character/foetale.png" type="Texture" id=14]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 200.018
 
-[sub_resource type="SegmentShape2D" id=4]
+[sub_resource type="SegmentShape2D" id=2]
 a = Vector2( -2905.34, -5.02197 )
 b = Vector2( 2934.66, -5.02197 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "acceptance"
+[sub_resource type="Animation" id=3]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
@@ -36,8 +37,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "end"
+[sub_resource type="Animation" id=4]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
@@ -77,26 +77,28 @@ script = ExtResource( 12 )
 position = Vector2( 0, 10260 )
 script = ExtResource( 12 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( -24, -432 )
-SPEED = 500
-
-[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
-current = true
+[node name="Character" parent="." instance=ExtResource( 5 )]
+position = Vector2( -19.9409, -716.604 )
+SPEED = 400
 
 [node name="Music_Selector" parent="." instance=ExtResource( 7 )]
 denial = ExtResource( 9 )
-anger = ExtResource( 8 )
-bargain = ExtResource( 11 )
-depression = ExtResource( 10 )
+anger = ExtResource( 13 )
+bargain = ExtResource( 8 )
+depression = ExtResource( 11 )
+acceptance = ExtResource( 10 )
 
 [node name="Acceptance" type="Area2D" parent="."]
 position = Vector2( 0, 11797.3 )
 collision_layer = 16
-collision_mask = 16
+collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Acceptance"]
 shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Acceptance"]
+position = Vector2( 0, -20.2051 )
+texture = ExtResource( 14 )
 
 [node name="End" type="Area2D" parent="."]
 position = Vector2( 5.33936, -964.978 )
@@ -106,11 +108,11 @@ collision_layer = 16
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="End"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/acceptance = SubResource( 2 )
-anims/end = SubResource( 3 )
+anims/acceptance = SubResource( 3 )
+anims/end = SubResource( 4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
